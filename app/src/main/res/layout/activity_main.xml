@@ -13,5 +13,33 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!" />
+        android:text="@string/BeginText"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:paddingTop="275dp"
+        android:textAlignment="viewStart" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:srcCompat="@drawable/madlibs"
+        tools:src="@drawable/madlibs"
+        android:id="@+id/bodypic"
+        android:visibility="visible"
+        android:paddingBottom="225dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:text="Get Started!"
+        android:textSize="20dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="31dp"
+        android:layout_width="175dp"
+        android:layout_height="75dp"
+        android:onClick="GetStarted" />
+
 </RelativeLayout>
