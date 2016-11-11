@@ -36,7 +36,7 @@ public class Fillable extends Activity{
         wordcount = (TextView) findViewById(R.id.wordcount);
         name_story = (TextView) findViewById(R.id.name_story);
 
-        // set the story
+        // set the story using method defined later
         createStory();
 
         // Initiate with maximum words to fill in
