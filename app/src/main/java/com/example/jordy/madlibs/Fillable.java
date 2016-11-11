@@ -43,7 +43,7 @@ public class Fillable extends Activity{
     }
 
     public void setWords(View view){
-        if (isEmpty(word_input)){
+        if (word_input.length() == 0){
             word_input.setError("This field can not be blank.");
             return;
         }
@@ -58,9 +58,4 @@ public class Fillable extends Activity{
             startActivity(goToStory);
         }
     }
-
-    private boolean isEmpty(EditText edit_text){
-        return edit_text.getText().toString().trim().length() == 0;
-    }
-
 }
