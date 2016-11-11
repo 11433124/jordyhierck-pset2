@@ -13,6 +13,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
+    // make intent to go to fillable page - start the app.
     public void goToFillable(View view){
         Intent getFillableIntent = new Intent(this, Fillable.class);
 
