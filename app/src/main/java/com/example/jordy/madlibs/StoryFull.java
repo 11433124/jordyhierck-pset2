@@ -3,8 +3,7 @@ package com.example.jordy.madlibs;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.widget.Button;
-import android.widget.EditText;
+import android.view.View;
 import android.widget.TextView;
 
 /**
@@ -23,6 +22,13 @@ public class StoryFull extends Activity {
 
         TextView story_full = (TextView) findViewById(R.id.story_full);
 
-        story_full.setText(story);
-    }
+        story_full.setText(story);}
+
+        public void newButton(View view){
+            Intent getFillableIntent = new Intent(this, Fillable.class);
+
+            startActivity(getFillableIntent);
+
+        }
+
 }
