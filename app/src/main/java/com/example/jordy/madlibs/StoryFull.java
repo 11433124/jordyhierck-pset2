@@ -8,6 +8,7 @@ import android.widget.TextView;
 
 /**
  * Created by Jordy Hierck on 11-11-2016.
+ * 11433124
  * Minor Programmeren
  * Universiteit van Amsterdam
  *

@@ -7,9 +7,11 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 import java.io.InputStream;
+import java.util.Random;
 
 /**
  * Created by Jordy Hierck on 11-11-2016.
+ * 11433124
  * Minor Programmeren
  * Universiteit van Amsterdam
  *
@@ -42,8 +44,28 @@ public class Fillable extends Activity{
 
     // create story from text file
     public Story createStory(){
-        InputStream university = getResources().openRawResource(R.raw.madlib2_university);
-        story = new Story(university);
+        Random rand = new Random();
+        int random_number = rand.nextInt(5); // Gives n such that 0 <= n < 20
+        if (random_number == 0){
+            InputStream text = getResources().openRawResource(R.raw.madlib0_simple);
+            story = new Story(text);
+        }
+        if (random_number == 1){
+            InputStream text = getResources().openRawResource(R.raw.madlib1_tarzan);
+            story = new Story(text);
+        }
+        if (random_number == 2){
+            InputStream text = getResources().openRawResource(R.raw.madlib2_university);
+            story = new Story(text);
+        }
+        if (random_number == 3){
+            InputStream text = getResources().openRawResource(R.raw.madlib3_clothes);
+            story = new Story(text);
+        }
+        if (random_number == 4){
+            InputStream text = getResources().openRawResource(R.raw.madlib4_dance);
+            story = new Story(text);
+        }
         return story;
     }
 
