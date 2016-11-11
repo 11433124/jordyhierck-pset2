@@ -23,6 +23,7 @@ public class Fillable extends Activity{
     // Global variables to use later on
     private EditText word_input;
     private TextView wordcount;
+    private TextView name_story;
     private Story story;
 
     @Override
@@ -33,6 +34,7 @@ public class Fillable extends Activity{
         // set variable to xml-id
         word_input = (EditText) findViewById(R.id.word_input);
         wordcount = (TextView) findViewById(R.id.wordcount);
+        name_story = (TextView) findViewById(R.id.name_story);
 
         // set the story
         createStory();
@@ -44,27 +46,34 @@ public class Fillable extends Activity{
 
     // create story from text file
     public Story createStory(){
+        // create random integer responding to different texts to display at random
         Random rand = new Random();
-        int random_number = rand.nextInt(5); // Gives n such that 0 <= n < 20
+        int random_number = rand.nextInt(5);
         if (random_number == 0){
             InputStream text = getResources().openRawResource(R.raw.madlib0_simple);
             story = new Story(text);
+            // set text to show what story you are typing
+            name_story.setText("You are writing a simple story!");
         }
         if (random_number == 1){
             InputStream text = getResources().openRawResource(R.raw.madlib1_tarzan);
             story = new Story(text);
+            name_story.setText("You are writing a story about Tarzan!");
         }
         if (random_number == 2){
             InputStream text = getResources().openRawResource(R.raw.madlib2_university);
             story = new Story(text);
+            name_story.setText("You are writing a story about the life of a scholar!");
         }
         if (random_number == 3){
             InputStream text = getResources().openRawResource(R.raw.madlib3_clothes);
             story = new Story(text);
+            name_story.setText("You are writing a story about clothes!");
         }
         if (random_number == 4){
             InputStream text = getResources().openRawResource(R.raw.madlib4_dance);
             story = new Story(text);
+            name_story.setText("You are writing a story about dancing!");
         }
         return story;
     }
